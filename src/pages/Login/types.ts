@@ -1,3 +1,4 @@
+
 export interface IFormLogin {
     email: string;
     password: string;
@@ -5,5 +6,5 @@ export interface IFormLogin {
 
 export const defaultValues: IFormLogin = {
     email: '',
-    password: ''
+    password: '',
 }

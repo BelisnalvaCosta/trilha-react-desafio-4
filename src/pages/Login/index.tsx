@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import Button from "../../components/Button";
 import Input from "../../components/Input";
+import Button from "../../components/Button";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
@@ -28,7 +28,9 @@ const Login = () => {
     reValidateMode: "onChange",
   });
 
-  return (
+  console.log(isValid);
+
+  return (<>
     <Container>
       <LoginContainer>
         <Column>
@@ -49,10 +51,13 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" onClick={function (): void {
+            throw new Error("Function not implemented.");
+          }} />
         </Column>
       </LoginContainer>
     </Container>
+    </>
   );
 };
 
